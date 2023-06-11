@@ -6,8 +6,6 @@ My Solutions for the Second Coding Exercise in Section 5 of **[Node.JS — The C
 
 This is an example of a single page app done with Node.JS & Express.JS.
 
-In addition to seeing the name added in the Server `console.log(...)` output, it also adds it to the end of a text file, `userList.txt`. Note: after adding user names, if you wish to restore the text file to its original state, delete everything after the "**Spuds McKenzie**" line.
-
 ### To Launch
 
 After cloning the repository locally, first run —
