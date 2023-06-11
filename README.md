@@ -10,7 +10,13 @@ In addition to seeing the name added in the Server `console.log(...)` output, it
 
 ### To Launch
 
-After cloning the repository locally, run it thus —
+After cloning the repository locally, first run —
+
+```
+$ npm i
+```
+
+Then, run the Node.JS/Express.JS app thus —
 
 ```
 $ npm start
