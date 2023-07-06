@@ -2,29 +2,6 @@ const express = require('express');
 
 const app = express();
 
-/*
-app.use('/', (req, res, next) => {
-	console.log('Runs, every time!');
-	next();
-});
-
-app.use('/next-page', (req, res, next) => {
-	console.log('In the Second Next Page Middleware!');
-	res.send(`
-						<h1>The Next Page</h1>
-						<a href="/" alt="Link to The Home Page"><h3>Go Back To The App Home Page</h3></a>.
-	`);
-});
-
-app.use('/', (req, res, next) => {
-	console.log('In the Main Home Page Middleware!');
-	res.send(`
-						<h1>Hello from this Node.JS & Express App!</h1>
-						<a href="/next-page" alt"Link to The Next Page"><h3>Go To The Next Page</h3></a>.
-	`);
-});
-*/
-
 app.use('/users', (req, res, next) => {
 	console.log('In the Second Users Page Middleware!');
 	res.send(`
