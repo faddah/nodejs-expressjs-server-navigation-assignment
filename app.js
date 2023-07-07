@@ -1,7 +1,19 @@
+const path = require('path');
+
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
+const rootDir = require('./util/path')
+
+const usersRoutes = require('./routes/users');
+const coRoutes = require('./routes/company');
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')));
+
+/* 
 app.use('/users', (req, res, next) => {
 	console.log('In the Second Users Page Middleware!');
 	res.send(`
@@ -17,6 +29,12 @@ app.use('/', (req, res, next) => {
 		<a href="/users" alt"Link to Our Users Page"><h3>Go To Our Users Page</h3></a>.
 	`);
 });
+ */
+
+app.use(usersRoutes);
+app.use(coRoutes);
+
+app.use((req, res, next) => res.status(404).sendFile(path.join(rootDir, 'views', '404.html')));
 
 const protocol = `http`;
 const server = `127.0.0.1`
